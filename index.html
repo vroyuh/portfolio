@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yulie — UX Researcher & Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <span class="nav-time" id="clock"></span>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#">Resume</a></li>
+    </ul>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-text">
+      <h1 class="hero-title">
+        <span class="xahn">Hi! I'm Yulie</span>
+        a UX Researcher
+        and Designer
+      </h1>
+      <div class="hero-meta">
+        <span>M.A. student at CGU</span>
+        <span>UX Researcher at CGU's GIT Lab</span>
+      </div>
+      <div class="spin-badge">
+        <a href="#projects" class="spin-ring" aria-label="Check out my projects">
+          <svg viewBox="0 0 72 72" width="72" height="72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="circlePath" d="M 36,36 m -26,0 a 26,26 0 1,1 52,0 a 26,26 0 1,1 -52,0" fill="none"/>
+            <text font-family="'Xanh Mono',monospace" font-size="7.5" fill="#7A766E" letter-spacing="3.5">
+              <textPath href="#circlePath">✦CHECK✦OUT✦MY✦PROJECTS✦</textPath>
+            </text>
+          </svg>
+          <div class="arrow">↓</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <div class="hero-img-frame">
+        <img src="images/yulie.jpeg" alt="Yulie — UX Researcher and Designer" />
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <div class="marquee-item">Featured Projects <span class="divider">✦*</span></div>
+        <div class="marquee-item">Featured Projects <span class="divider">✦*</span></div>
+        <div class="marquee-item">Featured Projects <span class="divider">✦*</span></div>
+        <div class="marquee-item">Featured Projects <span class="divider">✦*</span></div>
+        <div class="marquee-item">Featured Projects <span class="divider">✦*</span></div>
+        <div class="marquee-item">Featured Projects <span class="divider">✦*</span></div>
+        <div class="marquee-item">Featured Projects <span class="divider">✦*</span></div>
+        <div class="marquee-item">Featured Projects <span class="divider">✦*</span></div>
+      </div>
+    </div>
+    
+    <div class="projects-list">
+      <a class="project-row" href="#">
+        <span class="proj-num">01</span>
+        <div class="proj-info">
+          <p class="proj-title">Wall Art Whisperer</p>
+          <p class="proj-desc">Discovering ways to improve the art installation life cycle.</p>
+        </div>
+        <span class="proj-year">/25</span>
+      </a>
+      <a class="project-row" href="#">
+        <span class="proj-num">02</span>
+        <div class="proj-info">
+          <p class="proj-title">Majia</p>
+          <p class="proj-desc">Creating a digital space to empower and guide solo travelers.</p>
+        </div>
+        <span class="proj-year">/25</span>
+      </a>
+      <a class="project-row" href="#">
+        <span class="proj-num">03</span>
+        <div class="proj-info">
+          <p class="proj-title">Titan Radio</p>
+          <p class="proj-desc">Revamping a radio station's digital experience to amplify its voice.</p>
+        </div>
+        <span class="proj-year">/24</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-col">
+      <h4>Projects</h4>
+      <a href="#">WAW</a>
+      <a href="#">Majia</a>
+      <a href="#">Titan Radio</a>
+    </div>
+    <div class="footer-col">
+      <h4>Links</h4>
+      <a href="#">Resume</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-col"></div>
+    <div class="footer-connect">
+      <p>Let's Connect!</p>
+      <div class="footer-icons">
+        <a href="/cdn-cgi/l/email-protection#7900160c0b391c14181015571a1614" aria-label="Email">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M2 7l10 7 10-7"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const clock = document.getElementById('clock');
+    function updateClock() {
+      const now = new Date();
+      clock.textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    const headline = document.getElementById('featuredHeadline');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) headline.classList.add('visible'); });
+    }, { threshold: 0.2 });
+    observer.observe(headline);
+  </script>
+</body>
+</html>
