@@ -181,7 +181,7 @@ nav {
   font-size: clamp(2rem, 5vw, 4rem);
   color: var(--ink);
   font-style: italic;
-  font-family: 'Xanh Mono', monospace;
+  font-family: 'Xanh Mono';
 }
 @keyframes marquee {
   from { transform: translateX(0); }

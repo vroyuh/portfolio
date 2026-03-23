@@ -1,0 +1,388 @@
+/* ── MAJIA CASE STUDY ── */
+
+/* HERO */
+.cs-hero {
+  padding: 7rem 3rem 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+.cs-title {
+  font-family: 'Oxanium';
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 400;
+  letter-spacing: -.02em;
+  line-height: 1;
+  margin-bottom: .9rem;
+}
+.cs-date {
+  font-size: .85rem;
+  font-weight: 300;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+}
+.cs-info-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  margin-top: 8rem;
+}
+.cs-info-label {
+  font-size: .8rem;
+  font-weight: 500;
+  margin-bottom: .30rem;
+  margin-top: 3rem;
+}
+.cs-info-label:first-child { margin-top: 0; }
+.cs-info-value {
+  font-size: .85rem;
+  font-weight: 300;
+  color: var(--muted);
+}
+.cs-info-body {
+  font-size: .9rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+/* TICKER */
+.cs-ticker {
+  overflow: hidden;
+  border-bottom: 1px solid var(--rule);
+  padding: .75rem 0;
+}
+.cs-ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+  font-family: 'Oxanium';
+  font-size: clamp(2rem, 10vw, 5rem);
+  font-weight: 300;
+  letter-spacing: .04em;
+}
+.cs-ticker-icon {
+  color: var(--ink);
+  font-size: .8em;
+   font-style: italic;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* SECTIONS */
+.cs-section {
+  padding: 3rem 3rem 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+.cs-section-heading {
+  font-family: 'Oxanium';
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  letter-spacing: -.01em;
+}
+.cs-body-text {
+  font-size: .88rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: .75rem;
+  max-width: 760px;
+}
+.cs-sub-heading {
+  font-size: .85rem;
+  font-weight: 500;
+  margin: 1.5rem 0 .75rem;
+}
+.cs-indent {
+  padding-left: 1.5rem;
+  color: var(--muted);
+}
+
+/* PROCESS STEPS */
+.cs-steps {
+  display: flex;
+  gap: 0;
+  margin-top: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cs-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+  padding: 1.5rem 2.5rem;
+  position: relative;
+}
+.cs-step + .cs-step::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 20%; bottom: 20%;
+  width: 1px;
+  background: var(--rule);
+}
+.cs-step-num {
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Xanh Mono', monospace;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.cs-step-label {
+  font-size: .75rem;
+  text-align: center;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* PERSONA */
+.cs-persona-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  border: 1px solid var(--rule);
+  margin-top: 1.5rem;
+}
+.cs-persona-left {
+  border-right: 1px solid var(--rule);
+  padding: 1.5rem 1.25rem;
+}
+.cs-persona-approx {
+  font-family: 'Xanh Mono', monospace;
+  font-size: .6rem;
+  color: var(--muted);
+  letter-spacing: .08em;
+  margin-bottom: .5rem;
+}
+.cs-persona-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: .75rem;
+}
+.cs-persona-name {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.cs-persona-attrs {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.cs-persona-attrs > div {
+  display: flex;
+  flex-direction: column;
+}
+.cs-attr-label {
+  font-family: 'Xanh Mono', monospace;
+  font-size: .58rem;
+  letter-spacing: .1em;
+  color: var(--muted);
+}
+.cs-attr-val {
+  font-size: .8rem;
+  font-weight: 400;
+}
+.cs-persona-right {
+  padding: 1.5rem;
+}
+.cs-persona-bio {
+  font-size: .8rem;
+  font-weight: 300;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--muted);
+}
+.cs-persona-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.cs-persona-col-title {
+  font-family: 'Xanh Mono', monospace;
+  font-size: .6rem;
+  letter-spacing: .1em;
+  color: var(--muted);
+  margin-bottom: .5rem;
+}
+.cs-persona-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.cs-persona-list li {
+  font-size: .78rem;
+  font-weight: 300;
+  line-height: 1.5;
+  padding-left: .9rem;
+  position: relative;
+}
+.cs-persona-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+
+/* QUESTIONS GRID */
+.cs-questions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--rule);
+  margin: .75rem 0;
+}
+.cs-question-card {
+  padding: 1.25rem 1rem;
+  border-right: 1px solid var(--rule);
+  font-size: .8rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.cs-question-card:last-child { border-right: none; }
+
+/* FINDINGS LIST */
+.cs-findings-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  margin-top: .5rem;
+}
+.cs-findings-list li {
+  font-size: .88rem;
+  font-weight: 300;
+  line-height: 1.65;
+  padding-left: 1rem;
+  position: relative;
+  max-width: 760px;
+}
+.cs-findings-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+}
+
+/* TABLE */
+.cs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: .85rem;
+}
+.cs-table td {
+  padding: .85rem 1rem;
+  border: 1px solid var(--rule);
+  font-weight: 300;
+  line-height: 1.55;
+  vertical-align: top;
+}
+.cs-table-name {
+  font-weight: 500;
+  width: 160px;
+  white-space: nowrap;
+}
+
+/* CONCEPT TEST */
+.cs-link-text {
+  margin-bottom: .75rem;
+}
+.cs-link-text a {
+  font-size: .85rem;
+  color: var(--ink);
+  text-decoration: underline;
+  font-weight: 300;
+}
+.cs-numbered-list {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  margin-top: .5rem;
+}
+.cs-numbered-list li {
+  font-size: .88rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* NEXT STEPS */
+.cs-next-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: .5rem;
+}
+.cs-next-category {
+  font-size: .88rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+.cs-next-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.cs-next-list li {
+  font-size: .85rem;
+  font-weight: 300;
+  padding-left: 1rem;
+  position: relative;
+}
+.cs-next-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+}
+
+/* ADDITIONAL MATERIAL */
+.cs-material-link {
+  font-size: .85rem;
+  color: var(--ink);
+  text-decoration: underline;
+  font-weight: 300;
+  display: inline-block;
+  margin-top: .5rem;
+}
+
+/* BACK BAR */
+.cs-back-bar {
+  padding: 1.5rem 3rem;
+  border-top: 1px solid var(--rule);
+}
+.cs-back-link {
+  font-family: 'Xanh Mono', monospace;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+.cs-back-link:hover { text-decoration: underline; }
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .cs-hero, .cs-section, .cs-back-bar { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .cs-info-grid { grid-template-columns: 1fr; }
+  .cs-persona-card { grid-template-columns: 1fr; }
+  .cs-persona-left { border-right: none; border-bottom: 1px solid var(--rule); }
+  .cs-persona-cols { grid-template-columns: 1fr; }
+  .cs-questions-grid { grid-template-columns: 1fr 1fr; }
+  .cs-next-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .cs-steps { justify-content: flex-start; }
+}
