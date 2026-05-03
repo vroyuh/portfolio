@@ -297,6 +297,13 @@
 }
 
 /* CONCEPT TEST */
+.cs-gif-preview {
+  
+  width: 80%;        
+  max-width: 600px;  
+  display: block;
+  margin: 0;   
+}
 .cs-link-text {
   margin-bottom: .75rem;
 }
