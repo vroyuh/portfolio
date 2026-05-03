@@ -276,7 +276,7 @@
   left: 0;
 }
 
-/* TABLE */
+/* Competitive Analysis */
 .cs-table {
   width: 100%;
   border-collapse: collapse;
@@ -294,6 +294,8 @@
   font-weight: 500;
   width: 160px;
   white-space: nowrap;
+
+
 }
 
 /* CONCEPT TEST */
